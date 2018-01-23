@@ -25,7 +25,7 @@ package main
 
 import (
 	"os"
-	"log"
+
 	"./handler"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
@@ -39,7 +39,7 @@ func main() {
 		// log.Fatal("$PORT must be set")
 		port = ":1323"
 	}
-	
+
 	// 全てのリクエストで差し込みたいミドルウェア（ログとか）はここ
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
